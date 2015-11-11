@@ -5,7 +5,7 @@ import (
 	"os"
 	"text/template"
 
-	"github.com/clipperhouse/typewriter"
+	"github.com/rickb777/typewriter"
 )
 
 func run(c config) error {
@@ -13,7 +13,7 @@ func run(c config) error {
 		typewriter.ImportSpec{Path: "fmt"},
 		typewriter.ImportSpec{Path: "os"},
 		typewriter.ImportSpec{Path: "regexp"},
-		typewriter.ImportSpec{Path: "github.com/clipperhouse/typewriter"},
+		typewriter.ImportSpec{Path: "github.com/rickb777/typewriter"},
 	)
 
 	return execute(runStandard, c, imports, runTmpl)
@@ -27,7 +27,7 @@ func runStandard(c config) (err error) {
 	}
 
 	if len(app.Packages) == 0 {
-		return fmt.Errorf("No packages were found. See http://clipperhouse.github.io/gen to get started, or type %s help.", os.Args[0])
+		return fmt.Errorf("No packages were found. See http://rickb777.github.io/gen to get started, or type %s help.", os.Args[0])
 	}
 
 	found := false
@@ -37,11 +37,11 @@ func runStandard(c config) (err error) {
 	}
 
 	if !found {
-		return fmt.Errorf("No types marked with +gen were found. See http://clipperhouse.github.io/gen to get started, or type %s help.", os.Args[0])
+		return fmt.Errorf("No types marked with +gen were found. See http://rickb777.github.io/gen to get started, or type %s help.", os.Args[0])
 	}
 
 	if len(app.TypeWriters) == 0 {
-		return fmt.Errorf("No typewriters were imported. See http://clipperhouse.github.io/gen to get started, or type %s help.", os.Args[0])
+		return fmt.Errorf("No typewriters were imported. See http://rickb777.github.io/gen to get started, or type %s help.", os.Args[0])
 	}
 
 	if _, err := app.WriteAll(); err != nil {
@@ -79,7 +79,7 @@ func run() error {
 	}
 
 	if len(app.Packages) == 0 {
-		return fmt.Errorf("No packages were found. See http://clipperhouse.github.io/gen to get started, or type %s help.", os.Args[0])
+		return fmt.Errorf("No packages were found. See http://rickb777.github.io/gen to get started, or type %s help.", os.Args[0])
 	}
 
 	found := false
@@ -89,11 +89,11 @@ func run() error {
 	}
 
 	if !found {
-		return fmt.Errorf("No types marked with +gen were found. See http://clipperhouse.github.io/gen to get started, or type %s help.", os.Args[0])
+		return fmt.Errorf("No types marked with +gen were found. See http://rickb777.github.io/gen to get started, or type %s help.", os.Args[0])
 	}
 
 	if len(app.TypeWriters) == 0 {
-		return fmt.Errorf("No typewriters were imported. See http://clipperhouse.github.io/gen to get started, or type %s help.", os.Args[0])
+		return fmt.Errorf("No typewriters were imported. See http://rickb777.github.io/gen to get started, or type %s help.", os.Args[0])
 	}
 
 	if _, err := app.WriteAll(); err != nil {

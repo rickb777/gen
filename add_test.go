@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/clipperhouse/typewriter"
+	"github.com/rickb777/typewriter"
 )
 
 func TestAdd(t *testing.T) {
@@ -17,7 +17,7 @@ func TestAdd(t *testing.T) {
 		t.Error("add with no arguments should be an error")
 	}
 
-	foo := typewriter.ImportSpec{Name: "_", Path: "github.com/clipperhouse/foowriter"}
+	foo := typewriter.ImportSpec{Name: "_", Path: "github.com/rickb777/foowriter"}
 	before, err := getTypewriterImports(c)
 
 	if err != nil {

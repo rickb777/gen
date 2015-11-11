@@ -30,7 +30,7 @@ func TestList(t *testing.T) {
 	b.Reset()
 
 	// create a custom typewriter import file
-	if err := add(c, "github.com/clipperhouse/foowriter"); err != nil {
+	if err := add(c, "github.com/rickb777/foowriter"); err != nil {
 		t.Error(err)
 	}
 

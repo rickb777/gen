@@ -1,6 +1,6 @@
 package main
 
 import (
-	_ "github.com/clipperhouse/slice"
-	_ "github.com/clipperhouse/set"
+	_ "github.com/rickb777/slice"
+	_ "github.com/rickb777/set"
 )

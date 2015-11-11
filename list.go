@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"text/template"
 
-	"github.com/clipperhouse/typewriter"
+	"github.com/rickb777/typewriter"
 )
 
 func list(c config) error {
 	imports := typewriter.NewImportSpecSet(
 		typewriter.ImportSpec{Path: "fmt"},
 		typewriter.ImportSpec{Path: "os"},
-		typewriter.ImportSpec{Path: "github.com/clipperhouse/typewriter"},
+		typewriter.ImportSpec{Path: "github.com/rickb777/typewriter"},
 	)
 
 	listFunc := func(c config) error {

@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/clipperhouse/typewriter"
+	"github.com/rickb777/typewriter"
 )
 
 // +gen slice:"Where"
@@ -40,7 +40,7 @@ func TestRun(t *testing.T) {
 
 	// create a custom typewriter import file
 	imports := typewriter.NewImportSpecSet(
-		typewriter.ImportSpec{Name: "_", Path: "github.com/clipperhouse/foowriter"},
+		typewriter.ImportSpec{Name: "_", Path: "github.com/rickb777/foowriter"},
 	)
 
 	if err := createCustomFile(c, imports); err != nil {

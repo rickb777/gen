@@ -1,6 +1,6 @@
 package main
 
-import "github.com/clipperhouse/typewriter"
+import "github.com/rickb777/typewriter"
 
 type pkg struct {
 	Name    string

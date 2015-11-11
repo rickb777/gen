@@ -4,7 +4,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/clipperhouse/typewriter"
+	"github.com/rickb777/typewriter"
 )
 
 type config struct {
@@ -21,6 +21,6 @@ var defaultConfig = config{
 
 // keep in sync with imports.go
 var stdImports = typewriter.NewImportSpecSet(
-	typewriter.ImportSpec{Name: "_", Path: "github.com/clipperhouse/slice"},
-	typewriter.ImportSpec{Name: "_", Path: "github.com/clipperhouse/stringer"},
+	typewriter.ImportSpec{Name: "_", Path: "github.com/rickb777/slice"},
+	typewriter.ImportSpec{Name: "_", Path: "github.com/rickb777/stringer"},
 )

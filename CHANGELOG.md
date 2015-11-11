@@ -1,12 +1,12 @@
 ###3 Jan 2015
 
-Added [stringer](https://github.com/clipperhouse/stringer) as a built-in typewriter.
+Added [stringer](https://github.com/rickb777/stringer) as a built-in typewriter.
 
 ###30 Nov 2014 (v4)
 
-To get the latest: `go get github.com/clipperhouse/gen`. Type `gen help` to see usage.
+To get the latest: `go get github.com/rickb777/gen`. Type `gen help` to see usage.
 
-(Because the go.tools import path has changed, you may see import errors. You may wish to delete the code.google.com folder from your $GOPATH/src and maybe from /pkg too. Heck, go ahead delete your $GOPATH/src/github.com/clipperhouse folder to start clean.)
+(Because the go.tools import path has changed, you may see import errors. You may wish to delete the code.google.com folder from your $GOPATH/src and maybe from /pkg too. Heck, go ahead delete your $GOPATH/src/github.com/rickb777 folder to start clean.)
 
 This release has several substantial changes.
 
@@ -29,7 +29,7 @@ For example, you can declare your Sum template only to be applicable to Numeric 
 
 Third-party typewriters are added to your package using a new command, `add`. It looks like this:
 
-	gen add github.com/clipperhouse/set
+	gen add github.com/rickb777/set
 	
 That’s a plain old Go import path.
 
@@ -73,17 +73,17 @@ Those type parameters are properly evaluated, and typewriters get full type info
 
 The main built-in typewriter used to be called `genwriter`, it is now called `slice`. Instead of the generated slice type being called Things, it’s now called ThingSlice.
 
-[slice](https://github.com/clipperhouse/slice) is now the only built-in typewriter.
+[slice](https://github.com/rickb777/slice) is now the only built-in typewriter.
 
-We’ve deprecated the built-in container typewriter, instead splitting it into optional [Set](https://github.com/clipperhouse/set), [List](https://github.com/clipperhouse/linkedlist) and [Ring](https://github.com/clipperhouse/ring) typewriters.
+We’ve deprecated the built-in container typewriter, instead splitting it into optional [Set](https://github.com/rickb777/set), [List](https://github.com/rickb777/linkedlist) and [Ring](https://github.com/rickb777/ring) typewriters.
 
 You can add them using the `add` command described above:
 
-	gen add github.com/clipperhouse/linkedlist
+	gen add github.com/rickb777/linkedlist
 
 ####Smaller interface
 
-For those developing their own typewriters: the [`TypeWriter` interface](https://github.com/clipperhouse/typewriter/blob/master/typewriter.go) got smaller. It’s now:
+For those developing their own typewriters: the [`TypeWriter` interface](https://github.com/rickb777/typewriter/blob/master/typewriter.go) got smaller. It’s now:
 
 	type TypeWriter interface {
 		Name() string
@@ -95,11 +95,11 @@ For those developing their own typewriters: the [`TypeWriter` interface](https:/
 
 We also run [goimports](https://godoc.org/golang.org/x/tools/imports) on generated code, so if your typewriter only uses the standard library, you might not need to specify anything for Imports() -- they’ll automagically be added to the generated source.
 
-Let me (@clipperhouse) know if any questions.
+Let me (@rickb777) know if any questions.
 
 ###28 Jun 2014 (v3)
 
-To get the latest: `go get -u github.com/clipperhouse/gen`. Type `gen help` to see commands.
+To get the latest: `go get -u github.com/rickb777/gen`. Type `gen help` to see commands.
 
 This release introduces the optional `_gen.go` file for importing custom typewriters.
 
@@ -111,14 +111,14 @@ Prior to this release, typewriters were simply part of the `gen` binary. Now, by
 package main
 
 import (
-	_ "github.com/clipperhouse/containerwriter"
-	_ "github.com/clipperhouse/typewriters/genwriter"
+	_ "github.com/rickb777/containerwriter"
+	_ "github.com/rickb777/typewriters/genwriter"
 )
 ```
 
 Change those import paths to other, third-party typewriters. Then call `gen get`. `gen list` is helpful too.
 
-Docs on how to create a typewriter are coming soon. In the meantime, have a look at the [container](https://github.com/clipperhouse/gen/tree/master/typewriters/container) typewriter for a decent example.
+Docs on how to create a typewriter are coming soon. In the meantime, have a look at the [container](https://github.com/rickb777/gen/tree/master/typewriters/container) typewriter for a decent example.
 
 ###12 Jun 2014
 
@@ -137,7 +137,7 @@ A few important behavioral changes:
 
 We are going to exploit this architecture to do some ~~evil~~ interesting things, stay tuned.
 
-Any trouble, please let me know via a GitHub issue, or [Twitter](http://twitter.com/clipperhouse), or…
+Any trouble, please let me know via a GitHub issue, or [Twitter](http://twitter.com/rickb777), or…
 
 ###9 Mar 2014
 
@@ -165,7 +165,7 @@ Generated code is now passed through the go/format package (gofmt) on output, so
 
 This release includes breaking changes. To update:
 
-`go get -u github.com/clipperhouse/gen`
+`go get -u github.com/rickb777/gen`
 
 Command-line type specification has been deprecated, and replaced by markup per #23. It takes the form of:
 

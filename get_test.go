@@ -24,7 +24,7 @@ func TestGet(t *testing.T) {
 		t.Errorf("should return 2 imports, got %v", len(imps))
 	}
 
-	if err := add(c, "github.com/clipperhouse/foowriter", "github.com/clipperhouse/setwriter"); err != nil {
+	if err := add(c, "github.com/rickb777/foowriter", "github.com/rickb777/setwriter"); err != nil {
 		t.Error(err)
 	}
 
